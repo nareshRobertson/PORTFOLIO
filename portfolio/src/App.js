@@ -6,7 +6,7 @@ function App() {
   const [user, setUser] = useState(null);
   useEffect(() => {
     // NOTE: Use your username below
-    fetch('https://gitconnected.com/v1/portfolio/treyhuffine')
+    fetch('https://gitconnected.com/v1/portfolio/nareshrobertson')
       .then(res => res.json())
       .then(user => {
         setUser(user);
@@ -14,7 +14,7 @@ function App() {
   }, []);
 
   if (!user) {
-    return <div />;
+    return <div>Nouser</div>;
   }
 
   return <Pages user={user} />;
